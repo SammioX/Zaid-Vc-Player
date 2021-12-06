@@ -73,10 +73,8 @@
 
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
-- [Menthos Music](https://GitHub.com/ToxicCybers/MentosMusic)
 - Callsmusic
 - Yukki
-- Daisy
 - PyroGram
 -xyz ⚡
 
