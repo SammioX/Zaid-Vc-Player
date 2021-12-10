@@ -10,21 +10,8 @@ from pyrogram.types import (
 def play_markup(videoid, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text="▶️", callback_data=f'resumevc2'),
-                InlineKeyboardButton(text="⏸️", callback_data=f'pausevc2'),
-                InlineKeyboardButton(text="⏭️", callback_data=f'skipvc2'),
-                InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2')
-            ],
-            [
-                InlineKeyboardButton(text="🔎 ɢᴇᴛ ʟʏʀɪᴄꜱ", callback_data=f'lyrics {videoid}|{user_id}'),
-                InlineKeyboardButton(text="🖱 ᴍᴇɴᴜ", callback_data=f'other {videoid}|{user_id}'),
-            ],
-            [
                 InlineKeyboardButton(text=f"✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{ZAID_SUPPORT}"),
-                InlineKeyboardButton(text=f"📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-            ],
-            [      
-                InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data=f'close2')
+                InlineKeyboardButton(text="🖱 ᴍᴇɴᴜ", callback_data=f'other {videoid}|{user_id}'),
             ],
         ]
     return buttons 
@@ -33,12 +20,23 @@ def play_markup(videoid, user_id):
 def others_markup(videoid, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text="✨ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                InlineKeyboardButton(text="➕ Group Playlist", callback_data=f'group_playlist {videoid}|{user_id}')
+
+                InlineKeyboardButton(text="▶️", callback_data=f'resumevc2'),
+
+                InlineKeyboardButton(text="⏸️", callback_data=f'pausevc2'),
+
+                InlineKeyboardButton(text="⏭️", callback_data=f'skipvc2'),
+
+                InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2')
+
             ],
             [
-                InlineKeyboardButton(text="Get Audio", callback_data=f'gets audio|{videoid}|{user_id}'),
-                InlineKeyboardButton(text="Get Video", callback_data=f'gets video|{videoid}|{user_id}')
+                InlineKeyboardButton(text="✨ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton(text="➕ ɢʀᴏᴜᴘ ᴘʟᴀʏʟɪsᴛ", callback_data=f'group_playlist {videoid}|{user_id}')
+            ],
+            [
+                InlineKeyboardButton(text="ᴀᴜᴅɪᴏ", callback_data=f'gets audio|{videoid}|{user_id}'),
+                InlineKeyboardButton(text="ᴠɪᴅᴇᴏ", callback_data=f'gets video|{videoid}|{user_id}')
             ],
             [
                 InlineKeyboardButton(text="🔙", callback_data=f'goback {videoid}|{user_id}'),
